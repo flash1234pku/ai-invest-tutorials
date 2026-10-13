@@ -1,0 +1,151 @@
+{
+ "date": "2026-10-14",
+ "title": "第 1 期：Grok Bot / Claude Code 投资策略工具与玩法",
+ "range": "2026-10-07 至 2026-10-14（台北时间）",
+ "items": [
+  {
+   "title": "tradingview-mcp：Claude Code/Codex 直连 TradingView（78 个 MCP 工具）",
+   "points": [
+    "开源项目，MIT 协议，通过 Chrome DevTools Protocol 让 AI 操作 TradingView",
+    "可辅助 Pine Script 开发、调试和历史回放，适合做股票量化"
+   ],
+   "url": "https://x.com/_zheergen/status/2109237105079783923",
+   "author": "@_zheergen",
+   "time": "2026-10-11 18:58",
+   "stats": "❤86 🔁25"
+  },
+  {
+   "title": "pinescript-agents：TradersPost 开源的 Claude Code TradingView 量化工具箱",
+   "points": [
+    "MIT 协议，内置 7 个 AI 代理，能把 YouTube 上的策略拆成 Pine Script",
+    "覆盖指标开发、代码调试、策略优化"
+   ],
+   "url": "https://x.com/_zheergen/status/2108874123514614130",
+   "author": "@_zheergen",
+   "time": "2026-10-10 18:55",
+   "stats": "❤164 🔁36"
+  },
+  {
+   "title": "TradingView 的免费替代 MCP 服务器（当日 GitHub 趋势榜第 7）",
+   "points": [
+    "一个 MCP 服务器提供付费级指标、实时行情、技术分析和回测",
+    "给 Opus 5.5 / Claude 交易系统用"
+   ],
+   "url": "https://x.com/RohOnChain/status/2107871472471748836",
+   "author": "@RohOnChain",
+   "time": "2026-10-08 00:31",
+   "stats": "❤129 🔁11"
+  },
+  {
+   "title": "用 Quantpedia + Claude 测试已发表策略的分步教程",
+   "points": [
+    "Quantpedia 收录已发表策略及其研究依据，免费层就够用",
+    "教程分步骤：先挑策略，再复现、回测"
+   ],
+   "url": "https://x.com/DaviddDotTech/status/2107760945434968178",
+   "author": "@DaviddDotTech",
+   "time": "2026-10-07 17:12",
+   "stats": "❤36 🔁2"
+  },
+  {
+   "title": "Claude Code 提示词：只优化离场规则",
+   "points": [
+    "让 Claude Code 扮演“专攻离场的量化策略开发者”，入场规则一律不动",
+    "目标是修好策略里亏钱最多的那一环"
+   ],
+   "url": "https://x.com/DaviddDotTech/status/2108242518194422015",
+   "author": "@DaviddDotTech",
+   "time": "2026-10-09 01:06",
+   "stats": "❤18 🔁1"
+  },
+  {
+   "title": "防过拟合：Claude Code + Grok Bot 分工搭建研究台",
+   "points": [
+    "痛点：AI 跑 100 个变体，可能把最走运的那次回测当成 alpha",
+    "分工：Claude Code 搭系统，Grok Bot 持续跑研究"
+   ],
+   "url": "https://x.com/nonepcbl/status/2109793240006148364",
+   "author": "@nonepcbl",
+   "time": "2026-10-13 07:48",
+   "stats": "❤18 🔁1"
+  },
+  {
+   "title": "12 个 Claude Code 代理组成的通宵“交易台”",
+   "points": [
+    "6 路数据：tick、订单簿、新闻、X、期权、链上",
+    "一晚读了 5,961 条信号，最后只给出 1 笔交易；每条都标了来源"
+   ],
+   "url": "https://x.com/0xOrionVega/status/2110027120604832080",
+   "author": "@0xOrionVega",
+   "time": "2026-10-13 23:17",
+   "stats": "❤30 🔁3（@0xSammyAlpha 发过同款文案）"
+  },
+  {
+   "title": "Sherwood：用 Grok Bot 模板跑链上对冲基金金库",
+   "points": [
+    "流程：加入 waitlist → 用 Grok bot 模板建金库 → 定规则，在 Robinhood Chain 交易代币化股票和加密货币",
+    "首批基金下周入驻（据 10-09 贴文）"
+   ],
+   "url": "https://x.com/imthatcarlos/status/2108577210890412496",
+   "author": "@imthatcarlos",
+   "time": "2026-10-09 23:15",
+   "stats": "❤16 🔁2",
+   "flag": "仅供参考：本条为观点/项目推广，未经验证"
+  },
+  {
+   "title": "Agentic credit 接入 Grok Bot：交易代理要先“挣到”用别人资金的资格",
+   "points": [
+    "观点：评判交易代理不该看策略听起来多厉害，而是看它能否赢得资金使用权"
+   ],
+   "url": "https://x.com/habibk79/status/2108747491109945436",
+   "author": "@habibk79",
+   "time": "2026-10-10 10:32",
+   "stats": "❤263 🔁9",
+   "flag": "仅供参考：本条为观点/项目推广，未经验证"
+  },
+  {
+   "title": "Lumibot：回测和实盘共用一套代码",
+   "points": [
+    "策略写一次，回测、实盘共用同一套生命周期",
+    "支持股票、期权、加密货币、期货、外汇；传统 Python 策略能和 AI Agent 一起跑"
+   ],
+   "url": "https://x.com/bkdgiffug/status/2109688546780979553",
+   "author": "@bkdgiffug",
+   "time": "2026-10-13 00:52",
+   "stats": "❤2"
+  },
+  {
+   "title": "Claude Code 接 Alpaca 模拟盘（10 万美元假资金）",
+   "points": [
+    "Alpaca 模拟账户：实时价格、真实订单类型，有官方连接器",
+    "列出 4 个 Opus 现在就能交易的地方"
+   ],
+   "url": "https://x.com/catstrateg/status/2108654010869661880",
+   "author": "@catstrateg",
+   "time": "2026-10-10 04:21",
+   "stats": "❤6"
+  },
+  {
+   "title": "公开实测：Grok Bot 跑两套加密交易机器人（仅模拟盘）",
+   "points": [
+    "Hyperliquid 期货机器人首轮模拟：$52 → $38.44，30 笔交易，胜率 20%",
+    "少见的如实亏损记录"
+   ],
+   "url": "https://x.com/VBahenan/status/2109297127734014346",
+   "author": "@VBahenan",
+   "time": "2026-10-11 22:56",
+   "stats": "",
+   "note": "保留原因：如实公开的亏损记录（模拟盘），可作为风险参考"
+  },
+  {
+   "title": "Claude Code + TradingView MCP：把交易想法变成回测",
+   "points": [
+    "提醒：信号上线前要先压测假设，并看样本外表现"
+   ],
+   "url": "https://x.com/NinaGentryam/status/2109313506990342410",
+   "author": "@NinaGentryam",
+   "time": "2026-10-12 00:01",
+   "stats": ""
+  }
+ ]
+}
