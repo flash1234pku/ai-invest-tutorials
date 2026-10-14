@@ -11,5 +11,8 @@
 ## 新增一期
 1. 复制 `issues/2026-10-14.json` 为 `issues/新日期.json`，改 `date`、`title`、`range`、`items`。
 2. 每条字段：`title`、`points`(列表)、`url`、`author`、`time`、可选 `stats`、`flag`（醒目“仅供参考”警示）、`note`（备注）。
+   - 可选 `summary`：1–2 句“一句话总结”，显示在标题下。
+   - 可选 `howto`：`{"steps": ["步骤1", ...], "caution": "注意事项"}`，显示为默认展开的“怎么用”折叠区（纯 HTML `<details>`，无 JS）。也可直接给步骤列表。依据原帖写，查不到写“原帖未说明”；推广/观点类只写客观说明和风险提醒。
+   - 两个字段都可省略，旧数据照常构建。
 3. 运行 `python3 build.py`，首页自动按日期倒序列出。
 4. 预览：`cd public && python3 -m http.server 8000`。

@@ -12,7 +12,18 @@
    "url": "https://x.com/_zheergen/status/2109237105079783923",
    "author": "@_zheergen",
    "time": "2026-10-11 18:58",
-   "stats": "❤86 🔁25"
+   "stats": "❤86 🔁25",
+   "summary": "开源 MCP 工具 tradingview-mcp，通过 Chrome DevTools Protocol 让 Claude Code 直接操作 TradingView 桌面端，适合用 TradingView 写 Pine Script、做股票量化研究的人。",
+   "howto": {
+    "steps": [
+     "准备好 TradingView 桌面端（原帖说需开启本地调试接口），从原帖里的仓库链接获取 tradingview-mcp",
+     "按仓库说明把它作为 MCP 服务器加入 Claude Code（Codex 需手动配置本地 MCP）",
+     "用自然语言让 AI 读取 K 线和 RSI/MACD 等指标，或切换品种、周期",
+     "让 AI 编写 Pine Script、编译并根据报错修复",
+     "用 TradingView Replay 逐根回放，验证历史信号"
+    ],
+    "caution": "注意：原帖说明它不是实盘交易机器人；Codex 兼容性作者未完整测试；TradingView 付费需求原帖未说明。"
+   }
   },
   {
    "title": "pinescript-agents：TradersPost 开源的 Claude Code TradingView 量化工具箱",
@@ -23,7 +34,18 @@
    "url": "https://x.com/_zheergen/status/2108874123514614130",
    "author": "@_zheergen",
    "time": "2026-10-10 18:55",
-   "stats": "❤164 🔁36"
+   "stats": "❤164 🔁36",
+   "summary": "TradersPost 开源的 pinescript-agents，为 Claude Code 提供 7 个 Pine Script v6 开发 Skill，可把 YouTube 交易教程拆成规则并生成指标/策略代码，适合 TradingView 用户。",
+   "howto": {
+    "steps": [
+     "从原帖里的仓库链接获取 pinescript-agents，按 README 安装到 Claude Code",
+     "给出一个 YouTube 交易教程链接，让 AI 提取指标参数和进出场规则",
+     "用自然语言描述想法，生成 Pine Script v6 代码",
+     "让调试 Skill 检查编译错误、重绘和逻辑问题",
+     "在 TradingView 回测并人工核对结果"
+    ],
+    "caution": "注意：原帖提醒它不是自动交易机器人，生成的策略要自己验证，特别留意重绘和未来数据泄漏。"
+   }
   },
   {
    "title": "TradingView 的免费替代 MCP 服务器（当日 GitHub 趋势榜第 7）",
@@ -34,7 +56,18 @@
    "url": "https://x.com/RohOnChain/status/2107871472471748836",
    "author": "@RohOnChain",
    "time": "2026-10-08 00:31",
-   "stats": "❤129 🔁11"
+   "stats": "❤129 🔁11",
+   "summary": "开源的 tradingview-mcp-server（MIT），在本机免费运行，给 Claude 提供 37 个工具：多市场筛选、技术指标、K 线形态、9 种策略回测和 walk-forward 过拟合检测。",
+   "howto": {
+    "steps": [
+     "按原帖用 pip install tradingview-mcp-server 安装",
+     "在 Claude Code 或 Claude Desktop 中把它加为 MCP 服务器",
+     "让 Claude 用筛选器扫描股票、加密、外汇市场",
+     "对某个标的做技术面分析，或在含手续费和滑点的条件下回测内置策略",
+     "用 walk-forward 测试看策略是否被标为 ROBUST 还是 OVERFITTED"
+    ],
+    "caution": "注意：原帖称“TradingView 免费替代”，属于作者说法；数据是否实时、是否完整，原帖未说明；回测不代表未来收益。"
+   }
   },
   {
    "title": "用 Quantpedia + Claude 测试已发表策略的分步教程",
@@ -45,7 +78,18 @@
    "url": "https://x.com/DaviddDotTech/status/2107760945434968178",
    "author": "@DaviddDotTech",
    "time": "2026-10-07 17:12",
-   "stats": "❤36 🔁2"
+   "stats": "❤36 🔁2",
+   "summary": "教你从 Quantpedia（已发表交易策略的资料库）挑一个策略，交给 Claude Code/Codex 复现并回测，适合想用有研究依据的策略起步的人。",
+   "howto": {
+    "steps": [
+     "在 quantpedia.com 免费层挑一个策略，记下规则、测试市场和出处论文",
+     "准备 Claude Code 或 ChatGPT Codex，再按原帖接一个回测插件",
+     "把规则贴给 AI：在指定标的和周期上、开启手续费、用全部历史回测，输出盈亏比、回撤、交易数，并与买入持有比较",
+     "只用论文发表年份之后的数据再测一次，看策略是否失效",
+     "在 TradingView 复核，再先观察 1–3 个月才考虑真钱"
+    ],
+    "caution": "注意：原帖附带的回测插件是否收费原帖未说明；很多策略公开后就失效，务必先做样本外测试。"
+   }
   },
   {
    "title": "Claude Code 提示词：只优化离场规则",
@@ -56,7 +100,18 @@
    "url": "https://x.com/DaviddDotTech/status/2108242518194422015",
    "author": "@DaviddDotTech",
    "time": "2026-10-09 01:06",
-   "stats": "❤18 🔁1"
+   "stats": "❤18 🔁1",
+   "summary": "一段可直接用的 Claude Code 提示词：入场规则不变，只比较 5 种离场方式的回测结果，帮你找出策略里亏钱最多的离场环节。",
+   "howto": {
+    "steps": [
+     "把现有策略规则贴进 Claude Code（原帖接了一个回测工具）",
+     "使用原帖提示词：保留全部入场规则，分别回测固定 ATR 止损止盈、1:2、1:3 盈亏比、10 根 K 线后时间离场和原离场",
+     "开启手续费、使用全部历史（原帖示例为 BTCUSDT 1 小时）",
+     "比较各方案的盈亏比、回撤和平均盈亏",
+     "选出方案后再做样本外验证"
+    ],
+    "caution": "注意：只在一段历史上挑最好的离场容易过拟合；原帖所用回测工具是否收费原帖未说明。"
+   }
   },
   {
    "title": "防过拟合：Claude Code + Grok Bot 分工搭建研究台",
@@ -67,7 +122,18 @@
    "url": "https://x.com/nonepcbl/status/2109793240006148364",
    "author": "@nonepcbl",
    "time": "2026-10-13 07:48",
-   "stats": "❤18 🔁1"
+   "stats": "❤18 🔁1",
+   "summary": "一个防过拟合的研究台思路：Claude Code 搭系统、Grok Bot 持续跑研究、Python 用手续费和未见数据压测回测，检查不过就不交易。",
+   "howto": {
+    "steps": [
+     "先挑一个你最信任的回测作为起点",
+     "把策略、交易所和风控上限交给 Claude Code，让它搭研究台",
+     "让回测必须包含手续费，并在模型没见过的数据上检验",
+     "设置检查规则：任何一项不通过就阻止下单",
+     "让代码而不是 AI 直接控制下单和风险"
+    ],
+    "caution": "注意：原帖完整提示词在图片里，具体内容原帖正文未说明；文中提到的 Jev 是什么原帖未说明。"
+   }
   },
   {
    "title": "12 个 Claude Code 代理组成的通宵“交易台”",
@@ -78,7 +144,18 @@
    "url": "https://x.com/0xOrionVega/status/2110027120604832080",
    "author": "@0xOrionVega",
    "time": "2026-10-13 23:17",
-   "stats": "❤30 🔁3（@0xSammyAlpha 发过同款文案）"
+   "stats": "❤30 🔁3（@0xSammyAlpha 发过同款文案）",
+   "summary": "作者展示用 12 个 Claude Code 代理读取 6 路行情/新闻数据，经回测和风控筛选后只给出 1 笔待人工批准的交易建议。",
+   "howto": {
+    "steps": [
+     "整理好自己的数据源（行情、新闻、X 等）",
+     "让 Claude Code 每路数据配一个代理，并标出单一来源的消息",
+     "要求每个信号都做样本外回测",
+     "让风控代理控制仓位（原帖用半凯利）",
+     "只输出一张需你批准的卡片，绝不让 AI 自己下单"
+    ],
+    "caution": "注意：同款文案在多个账号出现，疑似刷屏；所需数据源（订单簿、期权、链上）多为付费，原帖未说明成本；“38/41 窗口”为作者自述，未经验证。"
+   }
   },
   {
    "title": "Sherwood：用 Grok Bot 模板跑链上对冲基金金库",
@@ -90,7 +167,17 @@
    "author": "@imthatcarlos",
    "time": "2026-10-09 23:15",
    "stats": "❤16 🔁2",
-   "flag": "仅供参考：本条为观点/项目推广，未经验证"
+   "flag": "仅供参考：本条为观点/项目推广，未经验证",
+   "summary": "Sherwood 项目的推广：通过等候名单和 Grok bot 模板建立链上金库，在 Robinhood Chain 上交易代币化股票和加密货币。",
+   "howto": {
+    "steps": [
+     "客观说明：原帖流程为加入 sherwood.sh 等候名单 → 用其模板建金库 → 设定交易规则",
+     "原帖称每个提案链上结算、盈亏公开",
+     "“首批下周入驻”出自 10-09 的帖文，现状可能已变化",
+     "费用、门槛、资金托管方式原帖未说明"
+    ],
+    "caution": "风险提醒：本条为项目推广，不是推荐；链上金库涉及智能合约和代币化资产风险，参与前请自行查证项目背景与合规情况。"
+   }
   },
   {
    "title": "Agentic credit 接入 Grok Bot：交易代理要先“挣到”用别人资金的资格",
@@ -101,7 +188,16 @@
    "author": "@habibk79",
    "time": "2026-10-10 10:32",
    "stats": "❤263 🔁9",
-   "flag": "仅供参考：本条为观点/项目推广，未经验证"
+   "flag": "仅供参考：本条为观点/项目推广，未经验证",
+   "summary": "观点帖：认为交易代理的关键不是策略多厉害，而是能否用可衡量的交易记录（Agentic Credit Score）赢得使用他人资金的资格。",
+   "howto": {
+    "steps": [
+     "客观说明：原帖提到 Agentic Credit 用模拟盘和链上交易记录评估代理，实盘表现权重更高",
+     "原帖称评分 580 为其信用路径门槛，并受平台条件约束",
+     "该评分如何计算、资金来源和费用，原帖未说明"
+    ],
+    "caution": "风险提醒：本条为观点/项目推广，不是推荐；让 AI 代理管理他人资金风险很高，评分机制未经独立验证。"
+   }
   },
   {
    "title": "Lumibot：回测和实盘共用一套代码",
@@ -112,7 +208,18 @@
    "url": "https://x.com/bkdgiffug/status/2109688546780979553",
    "author": "@bkdgiffug",
    "time": "2026-10-13 00:52",
-   "stats": "❤2"
+   "stats": "❤2",
+   "summary": "Lumibot 是一个 Python 交易框架，让回测和实盘共用同一套策略代码，支持多资产、多家券商，并能通过 MCP 让 Claude Code 调用回测。",
+   "howto": {
+    "steps": [
+     "从原帖里的 GitHub 链接获取 Lumibot，按文档安装",
+     "用 Python 写一个策略，先在历史数据上回测",
+     "通过 MCP 让 Claude Code 调用回测并检查结果",
+     "接券商时先用 Alpaca 等的模拟账户",
+     "确认回测与模拟盘表现一致后再考虑实盘"
+    ],
+    "caution": "注意：数据源和券商可能收费，原帖未说明；框架统一代码不代表策略能赚钱。"
+   }
   },
   {
    "title": "Claude Code 接 Alpaca 模拟盘（10 万美元假资金）",
@@ -123,7 +230,18 @@
    "url": "https://x.com/catstrateg/status/2108654010869661880",
    "author": "@catstrateg",
    "time": "2026-10-10 04:21",
-   "stats": "❤6"
+   "stats": "❤6",
+   "summary": "说明 Claude Code 如何通过官方 MCP 接入 Alpaca 模拟盘（10 万美元假资金）练习，并列出 Kraken、Binance、Hyperliquid 的模拟/测试网选项。",
+   "howto": {
+    "steps": [
+     "注册 Alpaca 并取得 PAPER（模拟）密钥，存进 .env",
+     "在 Claude Code 中配置 Alpaca 官方 MCP，保持 ALPACA_PAPER_TRADE=true",
+     "让 Claude 写一个简单策略到 STRATEGY.md，并先展示计划",
+     "限制单笔金额，把每笔订单和账户价值记到日志",
+     "坚持“永不切换到实盘”，观察一段时间"
+    ],
+    "caution": "注意：模拟盘免费，但原帖也提醒：模拟赚钱只证明流程跑通，不证明你能承受真实亏损。"
+   }
   },
   {
    "title": "公开实测：Grok Bot 跑两套加密交易机器人（仅模拟盘）",
@@ -135,7 +253,17 @@
    "author": "@VBahenan",
    "time": "2026-10-11 22:56",
    "stats": "",
-   "note": "保留原因：如实公开的亏损记录（模拟盘），可作为风险参考"
+   "note": "保留原因：如实公开的亏损记录（模拟盘），可作为风险参考",
+   "summary": "一个公开的模拟盘实测：Grok Bot 跑 Hyperliquid 期货和 Solana meme 币两个机器人，首轮从 52 美元亏到 38.44 美元，作者如实公布。",
+   "howto": {
+    "steps": [
+     "把它当风险案例阅读，不是可照抄的策略",
+     "注意亏损原因：17 天回测在所有参数下都亏，手续费和高频交易吃掉利润",
+     "参考 v2 的调整：每笔风险 1%、最高 10 倍杠杆、放宽止损、减少交易",
+     "如要尝试，只用模拟盘或测试网"
+    ],
+    "caution": "注意：全程模拟盘、无真钱；杠杆期货和 meme 币风险极高；作者声明不构成投资建议。"
+   }
   },
   {
    "title": "Claude Code + TradingView MCP：把交易想法变成回测",
@@ -145,7 +273,17 @@
    "url": "https://x.com/NinaGentryam/status/2109313506990342410",
    "author": "@NinaGentryam",
    "time": "2026-10-12 00:01",
-   "stats": ""
+   "stats": "",
+   "summary": "一句提醒：Claude Code + TradingView MCP 能把交易想法变成回测，但上线前要先压测假设、看样本外表现。",
+   "howto": {
+    "steps": [
+     "参考本期第 1、3 条安装一个 TradingView MCP",
+     "把交易想法写成明确规则交给 Claude Code 回测",
+     "把数据分成样本内和样本外，分别测试",
+     "逐一修改关键假设（手续费、滑点、参数），看结果是否稳定"
+    ],
+    "caution": "注意：原帖只有一句话，具体工具和步骤原帖未说明，以上步骤依据本期其他条目整理。"
+   }
   }
  ]
 }

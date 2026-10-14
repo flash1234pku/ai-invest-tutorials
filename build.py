@@ -7,7 +7,8 @@ CSS="""body{font-family:system-ui,'PingFang TC','Noto Sans CJK SC',sans-serif;ma
 a{color:#0a58ca}nav a{margin-right:1em}.item{border:1px solid #ddd;border-radius:8px;padding:.8em 1.2em;margin:1em 0}
 .flag{background:#fff3cd;border:2px solid #e0a800;padding:.3em .6em;border-radius:4px;font-weight:bold;display:inline-block}
 .note{background:#e7f1ff;padding:.3em .6em;border-radius:4px}.meta{color:#666;font-size:.9em}
-footer{margin-top:3em;border-top:1px solid #ddd;padding-top:1em;color:#a00;font-weight:bold;font-size:.95em}"""
+details{background:#f6f8fa;border-radius:6px;padding:.4em .8em;margin:.6em 0}summary{cursor:pointer;font-weight:bold}.sum{background:#eef7ee;padding:.4em .6em;border-radius:4px}.caution{color:#a00}
+.item ol{padding-left:1.4em}footer{margin-top:3em;border-top:1px solid #ddd;padding-top:1em;color:#a00;font-weight:bold;font-size:.95em}"""
 e=html.escape
 def page(title,body):
     return f"""<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -26,6 +27,12 @@ def md(t):  # 极简 markdown：# 标题、- 列表、**粗体**、段落
         elif s:o.append(f'<p>{s}</p>')
     if inl:o.append('</ul>')
     return '\n'.join(o)
+def howto(h):
+    if not h: return ''
+    if isinstance(h,list): h={'steps':h}
+    st=''.join(f'<li>{e(x)}</li>' for x in h.get('steps',[]))
+    c=f"<p class=caution>{e(h['caution'])}</p>" if h.get('caution') else ''
+    return f"<details open><summary>怎么用</summary>{'<ol>'+st+'</ol>' if st else ''}{c}</details>"
 def main():
     os.makedirs(OUT,exist_ok=True)
     issues=sorted((json.load(open(f,encoding='utf-8')) for f in glob.glob(os.path.join(R,'issues','*.json'))),key=lambda x:x['date'],reverse=True)
@@ -34,6 +41,7 @@ def main():
         b=[f"<h1>{e(iss['title'])}</h1><p class=meta>发布：{e(iss['date'])}｜收录范围：{e(iss.get('range',''))}</p>"]
         for i,it in enumerate(iss['items'],1):
             b.append('<div class=item>'+f"<h3>{i}. {e(it['title'])}</h3>"+(f"<p class=flag>⚠️ {e(it['flag'])}</p>" if it.get('flag') else '')
+              +(f"<p class=sum><strong>一句话总结：</strong>{e(it['summary'])}</p>" if it.get('summary') else '')+howto(it.get('howto'))
               +'<ul>'+''.join(f'<li>{e(p)}</li>' for p in it['points'])+'</ul>'
               +(f"<p class=note>{e(it['note'])}</p>" if it.get('note') else '')
               +f"<p class=meta>作者 {e(it['author'])}｜{e(it['time'])}（台北时间）{('｜'+e(it['stats'])) if it.get('stats') else ''}｜<a href=\"{e(it['url'])}\" rel=\"noopener nofollow\">原帖</a></p></div>")
